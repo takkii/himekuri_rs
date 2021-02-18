@@ -1,5 +1,11 @@
 # 日めくり、Rust版
 
+依存
+
+```markdown
+gem install ffi
+```
+
 端末
 
 ```markdown
