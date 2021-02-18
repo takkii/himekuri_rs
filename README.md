@@ -9,6 +9,10 @@ gem install himekuri_rs
 コマンド
 
 ```markdown
+git clone git@github.com:takkii/himekuri_rs.git
+
+cd himekuri_ts
+
 himekuri_rs
 ```
 
