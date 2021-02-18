@@ -13,6 +13,6 @@ module Hello
   himekuri_ts = "himekuri_rs-".to_s + version.to_s
   
   extend FFI::Library
-  ffi_lib "$HOME/.rbenv/versions/" + ruby_version + "/lib/ruby/gems/" + ruby_folder_version + "/gems/" + himekuri_ts + "/lib/".to_s + "libhimekuri_rust.dylib"
+  ffi_lib "$HOME/.rbenv/versions/" + ruby_version + "/lib/ruby/gems/" + ruby_folder_version + "/gems/" + himekuri_rs +  "/lib/" + "libhimekuri_rust.dylib"
   attach_function :himekuri, [], :void
 end
