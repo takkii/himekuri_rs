@@ -6,7 +6,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "ffi"
 
 module Hello
+  ruby_version = (RUBY_VERSION).to_s
+  ruby_folder_version = ("3.0.0").to_s
+  version = (HimekuriRs::VERSION).to_s
+  himekuri_ts = "himekuri_rs-".to_s + version.to_s
+  
   extend FFI::Library
-  ffi_lib "./libhimekuri_rust.dylib"
+  ffi_lib "$HOME/.rbenv/versions/" + ruby_version + "/lib/ruby/gems/" + ruby_folder_version + "/gems/" + himekuri_ts + "/lib/".to_s + "libhimekuri_rust.dylib"
   attach_function :himekuri, [], :void
 end
