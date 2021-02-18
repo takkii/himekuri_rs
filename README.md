@@ -1,28 +1,24 @@
 # 日めくり、Rust版
 
-依存
+### 依存
 
 ```markdown
 gem install ffi
 ```
 
-端末
+### 環境構築
 
 ```markdown
 gem install himekuri_rs
-```
 
-コマンド
+cd $HOME
 
-```markdown
 git clone git@github.com:takkii/himekuri_rs.git
-
-cd himekuri_ts
 
 himekuri_rs
 ```
 
-出力
+### 出力
 
 ```markdown
 時刻を表示 : 2021年02月18日 : 17時51分38秒 : 木曜日
