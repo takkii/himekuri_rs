@@ -11,11 +11,15 @@ gem install ffi
 ```markdown
 gem install himekuri_rs
 
+himekuri_rs
+```
+
+### ※ 実行時ロードエラーになるとき
+
+```markdown
 cd $HOME
 
 git clone git@github.com:takkii/himekuri_rs.git
-
-himekuri_rs
 ```
 
 ### 出力
