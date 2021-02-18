@@ -7,6 +7,6 @@ require "ffi"
 
 module Hello
   extend FFI::Library
-  ffi_lib "libhimekuri_rust.dylib"
+  ffi_lib "./libhimekuri_rust.dylib"
   attach_function :himekuri, [], :void
 end
