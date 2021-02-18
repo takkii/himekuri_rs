@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["karuma.reason@gmail.com"]
 
   spec.summary       = "日めくり、Rust版"
-  spec.description   = "日めくり、Rust版"
+  spec.description   = "日めくりをRustで作りました。"
   spec.homepage      = "https://github.com/takkii/himekuri_rust"
   spec.license       = "MIT"
   spec.executables = %w(himekuri_rs)
