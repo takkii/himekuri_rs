@@ -6,6 +6,22 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'himekuri_rs'
+require 'rbconfig'
 
-Hello.himekuri
+def os
+  @os ||= (
+    host_os = RbConfig::CONFIG['host_os']
+    case host_os
+    when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
+      puts "現在、Windowsコマンドを用意していません!"
+    when /darwin|mac os/
+      require 'himekuri_rs'
+      Hello.himekuri
+    when /linux/
+      require 'himekuri_rs_l'
+      World.himekuri
+    else
+      puts "コマンドを用意していません!"
+    end
+  )
+end
