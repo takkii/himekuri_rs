@@ -27,3 +27,7 @@ def os
 end
 
 os
+
+GC.start
+
+__END__
