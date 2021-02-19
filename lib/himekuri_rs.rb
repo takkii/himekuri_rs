@@ -10,3 +10,9 @@ module Hello
   ffi_lib File.dirname(__FILE__) + "/libhimekuri_rust.dylib"
   attach_function :himekuri, [], :void
 end
+
+module World
+  extend FFI::Library
+  ffi_lib File.dirname(__FILE__) + "/libhimekuri_rust.so"
+  attach_function :himekuri, [], :void
+end
