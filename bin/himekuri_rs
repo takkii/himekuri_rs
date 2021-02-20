@@ -8,27 +8,23 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'rbconfig'
 
-def os
-  @os ||= begin
-    host_os = RbConfig::CONFIG['host_os']
-    case host_os
-    when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
-      puts '現在、Windowsコマンドを用意していません!'
-    when /darwin|mac os/
-      require 'himekuri_rs'
-      Hello.himekuri
-    when /linux/
-      require 'himekuri_rs_l'
-      World.himekuri
-    else
-      puts 'コマンドを用意していません!'
-    end
-  rescue StandardError => e
-    puts e.printStackTrace
+@os ||= begin
+  host_os = RbConfig::CONFIG['host_os']
+  case host_os
+  when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
+    puts '現在、Windowsコマンドを用意していません!'
+  when /darwin|mac os/
+    require 'himekuri_rs'
+    Hello.himekuri
+  when /linux/
+    require 'himekuri_rs_l'
+    World.himekuri
+  else
+    puts 'コマンドを用意していません!'
   end
+rescue StandardError => e
+  puts e.printStackTrace
 end
-
-os
 
 GC.start
 
