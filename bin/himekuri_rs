@@ -23,6 +23,8 @@ def os
     else
       puts 'コマンドを用意していません!'
     end
+  rescue StandardError => e
+    puts e.printStackTrace
   end
 end
 

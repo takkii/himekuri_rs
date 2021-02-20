@@ -19,7 +19,7 @@ AllCops:
 
   MethodLength:
   CountComments: true
-  Max: 16
+  Max: 20
 
 
   Layout/SpaceBeforeBrackets: # (new in 1.7)
