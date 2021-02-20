@@ -1,0 +1,35 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug command Line tools",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "home": "${HOME}",
+            "program": "${workspaceRoot}/bin/himekuri_rs",
+            "pathToRDebugIDE": "${HOME}/.rbenv/shims/rdebug-ide"
+        },
+        {
+            "name": "Debug himekuri_rs ruby file",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "home": "${HOME}",
+            "program": "${workspaceRoot}/lib/himekuri_rs.rb",
+            "pathToRDebugIDE": "${HOME}/.rbenv/shims/rdebug-ide"
+        },
+        {
+            "name": "Debug himekuri_rs_l ruby file",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "home": "${HOME}",
+            "program": "${workspaceRoot}/lib/himekuri_rs_l.rb",
+            "pathToRDebugIDE": "${HOME}/.rbenv/shims/rdebug-ide"
+        }
+    ]
+}
