@@ -9,11 +9,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rbconfig'
 
 def os
-  @os ||= (
+  @os ||= begin
     host_os = RbConfig::CONFIG['host_os']
     case host_os
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
-      puts "現在、Windowsコマンドを用意していません!"
+      puts '現在、Windowsコマンドを用意していません!'
     when /darwin|mac os/
       require 'himekuri_rs'
       Hello.himekuri
@@ -21,9 +21,9 @@ def os
       require 'himekuri_rs_l'
       World.himekuri
     else
-      puts "コマンドを用意していません!"
+      puts 'コマンドを用意していません!'
     end
-  )
+  end
 end
 
 os
