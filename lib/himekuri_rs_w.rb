@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'ffi'
 
-module World
+module Hi
   extend FFI::Library
   ffi_lib File.dirname(__FILE__) + '/himekuri_rust.dll'
   attach_function :himekuri, [], :void

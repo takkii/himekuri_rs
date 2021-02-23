@@ -12,7 +12,8 @@ begin
   host_os = RbConfig::CONFIG['host_os']
   case host_os
   when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
-    puts 'まだ、Windowsコマンドを用意していません !'
+    require 'himekuri_rs_w'
+    Hi.himekuri
   when /darwin|mac os/
     require 'himekuri_rs'
     Hello.himekuri
@@ -20,7 +21,11 @@ begin
     require 'himekuri_rs_l'
     World.himekuri
   else
-    puts 'その他の環境でコマンドを用意していません !'
+    require_relative 'lib/himekuri_rs/version'
+    def version_raise
+      puts HimekuriRs::VERSION
+    end
+    version_raise.tanraku
   end
 rescue StandardError => e
   puts e.printStackTrace
