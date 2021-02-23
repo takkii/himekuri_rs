@@ -8,3 +8,4 @@ gemspec
 gem 'debase'
 gem 'ffi'
 gem 'ruby-debug-ide'
+gem 'tanraku'
