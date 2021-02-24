@@ -8,18 +8,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'rbconfig'
 require 'tanraku'
+require 'himekuri_rs'
 
 begin
   host_os = RbConfig::CONFIG['host_os']
   case host_os
   when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
-    require 'himekuri_rs_w'
     Hi.himekuri
   when /darwin|mac os/
-    require 'himekuri_rs'
     Hello.himekuri
   when /linux/
-    require 'himekuri_rs_l'
     World.himekuri
   else
     require_relative 'lib/himekuri_rs/version'
