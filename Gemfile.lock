@@ -1,29 +1,27 @@
 PATH
   remote: .
   specs:
-    himekuri_rs (1.0.3)
+    himekuri_rs (1.0.4)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    debase (0.2.4.1)
-      debase-ruby_core_source (>= 0.10.2)
-    debase-ruby_core_source (0.10.12)
-    ffi (1.14.2)
-    rake (13.0.3)
-    ruby-debug-ide (0.7.2)
+    ffi (1.15.5)
+    ffi (1.15.5-x64-mingw-ucrt)
+    rake (13.0.6)
+    ruby-debug-ide (0.7.3)
       rake (>= 0.8.1)
     tanraku (1.0.0)
 
 PLATFORMS
+  x64-mingw-ucrt
   x86_64-darwin-20
 
 DEPENDENCIES
-  debase
   ffi
   himekuri_rs!
   ruby-debug-ide
   tanraku
 
 BUNDLED WITH
-   2.2.8
+   2.3.7
