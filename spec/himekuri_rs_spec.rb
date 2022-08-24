@@ -10,7 +10,7 @@ RSpec.describe 'HimekuriRs' do
 
   describe 'has a version number' do
     context 'version info' do
-      ver = '1.0.1.2'
+      ver = '1.0.5'
       subject { HimekuriRs::VERSION }
       it { is_expected.to eq(ver) }
     end
