@@ -1,4 +1,4 @@
-# 日めくりRust、RubyGems登録版
+# 日めくりRust
 
 _himekuri_rustから派生_
 
